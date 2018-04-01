@@ -3,7 +3,7 @@
 
 	<groupId>zbdy</groupId>
 	<artifactId>testMaven</artifactId>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.2</version>
 	<packaging>jar</packaging>
 
 	<name>testMaven</name>
@@ -37,7 +37,7 @@
 		<connection>scm:git:ssh://git@github.com/zbdy20061001/hello-world.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/zbdy20061001/hello-world.git</developerConnection>
 		<url>scm:git:ssh://git@github.com/zbdy20061001/hello-world.git</url>
-		<tag>rlease0.1</tag>
+		<tag>testMaven-1.2</tag>
 	</scm>
 	<build>
 		<plugins>
