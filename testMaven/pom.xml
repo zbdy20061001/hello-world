@@ -36,8 +36,7 @@
 	<scm>
 		<connection>scm:git:ssh://git@github.com/zbdy20061001/hello-world.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/zbdy20061001/hello-world.git</developerConnection>
-		<url>scm:git:ssh://git@github.com/zbdy20061001/hello-world.git</url>
-		<tag>rlease0.1</tag>
+		<url>https://github.com/zbdy20061001/hello-world</url>
 	</scm>
 	<build>
 		<plugins>
