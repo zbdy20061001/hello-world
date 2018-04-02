@@ -1,4 +1,4 @@
 # hello-world
 Starting Github
 
-Hellow Github!
+Hello Github!
