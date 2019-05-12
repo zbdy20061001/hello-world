@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
@@ -25,9 +24,8 @@ public class Basic {
 		session = jsch.getSession(user, host, 22);
 		session.setPassword(passwd);
 
-		java.util.Properties config = new java.util.Properties();
-		config.put("StrictHostKeyChecking", "no");
-		session.setConfig(config);
+		session.setConfig("StrictHostKeyChecking", "no");
+		session.setConfig("PreferredAuthentications", "password,gssapi-with-mic,publickey,keyboard-interactive");
 
 		session.connect();
 	}
@@ -36,19 +34,20 @@ public class Basic {
 	 * 执行相关的命令
 	 * 
 	 * @throws JSchException
-	 * @throws IOException 
+	 * @throws IOException
 	 */
-	public static void execCmd(String command, String user, String passwd, String host) throws JSchException, IOException {
+	public static void execCmd(String command, String user, String passwd, String host)
+			throws JSchException, IOException {
 		connect(user, passwd, host);
 
-		Channel channel = session.openChannel("exec");
-		((ChannelExec) channel).setCommand(command);
+		ChannelExec channel = (ChannelExec) session.openChannel("exec");
+		channel.setCommand(command);
 
 		channel.setInputStream(null);
-		((ChannelExec) channel).setErrStream(System.err);
+		channel.setErrStream(System.err);
 		channel.connect();
 		InputStream in = channel.getInputStream();
-		BufferedReader reader  = new BufferedReader(new InputStreamReader(in));
+		BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 		String buf = null;
 		while ((buf = reader.readLine()) != null) {
 			System.out.println(buf);
