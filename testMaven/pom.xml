@@ -3,7 +3,7 @@
 
 	<groupId>zbdy</groupId>
 	<artifactId>test-maven</artifactId>
-	<version>1.5</version>
+	<version>1.6-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>test-maven</name>
@@ -37,7 +37,7 @@
 		<connection>scm:git:ssh://git@github.com/zbdy20061001/hello-world.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/zbdy20061001/hello-world.git</developerConnection>
 		<url>https://github.com/zbdy20061001/hello-world</url>
-		<tag>test-maven-1.5</tag>
+		<tag>testMaven-1.3</tag>
 	</scm>
 	<build>
 		<plugins>
