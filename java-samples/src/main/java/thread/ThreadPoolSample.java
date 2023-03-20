@@ -3,6 +3,8 @@ package thread;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+//https://www.yiibai.com/java_multithreading/java-thread-pool.html
+//https://www.liaoxuefeng.com/wiki/1252599548343744/1306581130018849
 public class ThreadPoolSample implements Runnable {
     private String message;
 
